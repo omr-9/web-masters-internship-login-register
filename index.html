@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <h1>Home Page </h1>
+    <h3 id="username">Welcome </h3>
+    <button class="logout-btn">Logout</button>
+</div>
+
+</body>
+<script>
+const logoutButton = document.querySelector('button');
+const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+const usernameElement = document.getElementById('username');
+
+if (currentUser) {
+    usernameElement.textContent = `Welcome, ${currentUser.username}`;
+}
+logoutButton.addEventListener('click', () => {
+    localStorage.removeItem('currentUser');
+    window.location.href = 'login.html';
+});
+</script>
+</html>
