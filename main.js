@@ -69,7 +69,7 @@ const login = (event) => {
 
     if (user) {
         localStorage.setItem('currentUser', JSON.stringify({ username: user.username, email: user.email }));
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
     } else {
         alert("Invalid username or password.");
     }
