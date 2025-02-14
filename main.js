@@ -47,7 +47,7 @@ const register = (event) => {
     users.push({ username: formData.username, email: formData.email, password: formData.password, confirmPassword: formData.confirmPassword });
     localStorage.setItem('users', JSON.stringify(users));
 
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 
 const login = (event) => {
